@@ -1,0 +1,8 @@
+
+Method	  Purpose	                                         Returns   Modifies Original Array? 	 Stops Early?
+forEach	  Executes a function on each element                undefined	       No	                 No
+map	      Transforms each element, returns new array         New array	       No	                 No
+filter	Filters elements based on a test.                    New array	       No                  	 No
+every	Tests if all elements pass a condition	            (boolean)          No	                 Yes (on false)
+some	Tests if at least one element passes a condition	(boolean)	       No	                 Yes (on true)
+-----------------------------------------------------------------------------------------------
