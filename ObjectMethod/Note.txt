@@ -1,0 +1,12 @@
+*** Object.assign(target, source)
+========================================
+-> value copies from source to target.
+-> shallow copies 
+
+** Deep Copying Object.
+----------------------------------
+const obj = { a: 1, b: { c: 2 } };
+const deepClone =  JSON.parse( JSON.stringify(obj));
+
+deepClone.b.c = 7;// donn't modify original Object.
+
