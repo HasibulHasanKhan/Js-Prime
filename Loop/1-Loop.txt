@@ -1,0 +1,12 @@
+/***********************************
+ *for loop: Use when we know how many times we want to iterating over arrays with an index.
+ 
+ *while loop: Use when the number of iterations isn't known in advance, and we want to continue looping based on a condition.
+ 
+ *do...while: Use when the block of code should run at least once , even if the condition is false at first.
+
+ *for...of: Use to iterate over the values of arrays, strings, and other iterable objects.
+
+ *for...in: Use to iterate over the keys or properties of object.
+
+********************************/
