@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Geolocation and Fetch Example</title>
+  </head>
+  <body>
+    <button id="getLocation">Get Location and Fetch Weather</button>
+    <div id="output"></div>
+
+    <script>
+      document.getElementById("getLocation").addEventListener("click", () => {
+        if ("geolocation" in navigator) {
+          navigator.geolocation.getCurrentPosition(async (position) => {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+
+            document.getElementById(
+              "output"
+            ).innerText = `Latitude: ${lat}, Longitude: ${lon}`;
+
+            // Fetch weather data for the location (example with a fake URL)
+            try {
+              const response = await fetch(
+                `https://api.weatherapi.example.com/weather?lat=${lat}&lon=${lon}`
+              );
+              const data = await response.json();
+              console.log("Weather data:", data);
+            } catch (error) {
+              console.error("Error fetching weather data:", error);
+            }
+          });
+        } else {
+          alert("Geolocation is not supported by your browser.");
+        }
+      });
+    </script>
+  </body>
+</html>
